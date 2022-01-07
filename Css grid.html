@@ -1,0 +1,107 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin:0;
+        }
+
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .a1{
+            font-weight:bold;
+        }
+
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left:10;
+        }
+
+        a{
+            color:red;
+            font-size:20;
+            padding:10;
+            text-decoration:none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 10fr 50px;
+            grid-template-areas: 'header header' 
+                                 'menu mainContent'
+                                 'footer footer';
+        }
+
+        div.header {
+            background-color:skyblue;
+            color:white;
+            grid-area: header;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 55;
+            padding-top:5;
+        }
+
+        div.menu {
+            background-color:white;
+            grid-area: menu;
+        }
+
+        div.mainContent {
+            background-color:white;
+            grid-area: mainContent;
+        }
+
+        div.footer {
+            background-color:#909090;
+            font-family: Arial, Helvetica, sans-serif;
+            color:white;
+            grid-area: footer;
+            text-align:right;
+            font-size:23;
+            padding-top: 20;
+            padding-right:10;
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 1fr 3fr 55px;
+                grid-template-areas: 'header' 
+                                     'menu'
+                                     'mainContent'
+                                     'footer';
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">My website</div>
+        <div class="menu">
+            <h2>Navigation</h2>
+            <a class="a1" href="#">Home</a>
+            <br>
+            <a href="#">About</a>
+            <br>
+            <a href="#">Contact</a>
+        </div>
+        <div class="mainContent">
+            <h1 style="font-family: Arial, Helvetica, sans-serif;">Home page</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+        </div>
+        <div class="footer">Copyright © 2014 Jake Wright.</div>
+    </div>
+</body>
+</html>
